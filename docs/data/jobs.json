@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-15T18:45:16+00:00",
+ "generated_at": "2026-09-15T18:47:35+00:00",
  "companies": [
   {
    "name": "Shell",
@@ -15,7 +15,7 @@
    "ats": "workday",
    "state": "ok",
    "scanned": 246,
-   "kept": 3
+   "kept": 0
   },
   {
    "name": "Equinor",
@@ -299,7 +299,7 @@
    "url": "https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers/job/Hungary---Szeged/Customer-Care---Support-Advisor---German-Speaking---Entry-level-_RQ099900-1",
    "first_seen": "2026-09-15",
    "last_seen": "2026-09-15",
-   "active": true
+   "active": false
   },
   {
    "id": "b35971ecfe7e",
@@ -315,7 +315,7 @@
    "url": "https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers/job/IN-Patna/Sales-Trainee_RQ109411",
    "first_seen": "2026-09-15",
    "last_seen": "2026-09-15",
-   "active": true
+   "active": false
   },
   {
    "id": "a20364480740",
@@ -331,7 +331,7 @@
    "url": "https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers/job/IN-Varanasi/Sales-Trainee--Varanasi_RQ114792",
    "first_seen": "2026-09-15",
    "last_seen": "2026-09-15",
-   "active": true
+   "active": false
   }
  ],
  "work_rights": [
