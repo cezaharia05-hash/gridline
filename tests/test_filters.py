@@ -55,3 +55,14 @@ def test_multi_region():
 def test_word_boundaries():
     assert not keep("Undergraduate Ambassador", "London").keep  # 'graduate' inside a word
     assert not keep("IT Graduate Scheme", "London").keep
+
+
+def test_country_code_prefixes_and_noise_from_first_live_run():
+    assert not keep("Sales Trainee", "IN: Patna").keep
+    assert not keep("Customer Care & Support Advisor - German and English Speaking - Rotating shift (Entry level)", "Hungary - Szeged").keep
+    v = keep("Graduate Trading Analyst", "GB: London")
+    assert v.keep and v.regions == ("UK",)
+    assert keep("Absolvent Programm Finanzen", "DE - Essen").regions == ("EEA",)
+    # Real titles from the first run that should stay
+    assert keep("Finance - Shell Graduate Programme 2027 - United Kingdom", "London - Shell Centre").function == "finance"
+    assert keep("Graduate Program – Trading & Supply Chain", "Geneva").keep

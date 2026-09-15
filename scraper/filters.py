@@ -10,6 +10,23 @@ from functools import lru_cache
 
 EUROPE = ("UK", "CH", "EEA")
 
+# Workday sites often write locations as "IN: Patna" or "GB - London".
+EEA_CODES = {"AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT",
+             "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "NO", "IS", "LI"}
+CODE_PREFIX = re.compile(r"^\s*([A-Z]{2})\s*[:\-]\s")
+
+
+def region_from_code(location: str) -> str | None:
+    m = CODE_PREFIX.match(location or "")
+    if not m:
+        return None
+    code = m.group(1)
+    if code in ("GB", "UK"):
+        return "UK"
+    if code == "CH":
+        return "CH"
+    return "EEA" if code in EEA_CODES else "OTHER"
+
 
 def normalise(text: str | None) -> str:
     """Lowercase, strip accents, collapse whitespace."""
@@ -58,9 +75,14 @@ def classify_function(title: str, cfg: dict) -> str | None:
 def classify_regions(location: str, title: str, cfg: dict) -> tuple[str, ...] | None:
     """Return the European regions a role is in, ("UNKNOWN",) if unclear,
     or None if it is only outside Europe."""
+    coded = region_from_code(location)
+    if coded == "OTHER":
+        return None
     text = f"{location} {title}"
     regions_cfg = cfg["regions"]
     found = tuple(r for r in EUROPE if matches(text, regions_cfg.get(r)))
+    if coded and coded not in found:
+        found = found + (coded,)
     if found:
         return found
     if matches(text, regions_cfg.get("OTHER")):
