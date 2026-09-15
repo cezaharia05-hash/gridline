@@ -1,1 +1,341 @@
-{"generated_at": null, "companies": [], "jobs": []}
+{
+ "generated_at": "2026-09-15T18:42:28+00:00",
+ "companies": [
+  {
+   "name": "Shell",
+   "sector": "major",
+   "ats": "workday",
+   "state": "ok",
+   "scanned": 120,
+   "kept": 3
+  },
+  {
+   "name": "bp",
+   "sector": "major",
+   "ats": "workday",
+   "state": "ok",
+   "scanned": 246,
+   "kept": 3
+  },
+  {
+   "name": "Equinor",
+   "sector": "major",
+   "ats": "workday",
+   "state": "ok",
+   "scanned": 1,
+   "kept": 0
+  },
+  {
+   "name": "Centrica",
+   "sector": "utility",
+   "ats": "workday",
+   "state": "ok",
+   "scanned": 18,
+   "kept": 0
+  },
+  {
+   "name": "Trafigura",
+   "sector": "trader",
+   "ats": "workday",
+   "state": "ok",
+   "scanned": 15,
+   "kept": 0
+  },
+  {
+   "name": "Gunvor",
+   "sector": "trader",
+   "ats": "workday",
+   "state": "ok",
+   "scanned": 10,
+   "kept": 2
+  },
+  {
+   "name": "Glencore",
+   "sector": "trader",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.glencore.com/en/careers/early-careers"
+  },
+  {
+   "name": "Vitol",
+   "sector": "trader",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.vitol.com"
+  },
+  {
+   "name": "Mercuria",
+   "sector": "trader",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.mercuria.com"
+  },
+  {
+   "name": "ExxonMobil",
+   "sector": "major",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://corporate.exxonmobil.com"
+  },
+  {
+   "name": "TotalEnergies",
+   "sector": "major",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.totalenergies.com"
+  },
+  {
+   "name": "Eni",
+   "sector": "major",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.eni.com"
+  },
+  {
+   "name": "Repsol",
+   "sector": "major",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.repsol.com"
+  },
+  {
+   "name": "OMV",
+   "sector": "major",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.omv.com"
+  },
+  {
+   "name": "RWE",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.rwe.com"
+  },
+  {
+   "name": "E.ON",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.eon.com"
+  },
+  {
+   "name": "Uniper",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.uniper.energy"
+  },
+  {
+   "name": "EDF Trading",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.edftrading.com"
+  },
+  {
+   "name": "Engie",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.engie.com"
+  },
+  {
+   "name": "Iberdrola",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.iberdrola.com"
+  },
+  {
+   "name": "Enel",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.enel.com"
+  },
+  {
+   "name": "Vattenfall",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://group.vattenfall.com"
+  },
+  {
+   "name": "Ørsted",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://orsted.com"
+  },
+  {
+   "name": "Statkraft",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.statkraft.com"
+  },
+  {
+   "name": "Axpo",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.axpo.com"
+  },
+  {
+   "name": "SSE",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.sse.com"
+  },
+  {
+   "name": "National Grid",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://www.nationalgrid.com"
+  },
+  {
+   "name": "Octopus Energy",
+   "sector": "utility",
+   "ats": "manual",
+   "state": "manual",
+   "url": "https://octopus.energy"
+  }
+ ],
+ "jobs": [
+  {
+   "id": "c2b69f7e38a5",
+   "company": "Gunvor",
+   "sector": "trader",
+   "title": "Graduate Program – Quantitative Analysis",
+   "location": "Geneva",
+   "regions": [
+    "CH"
+   ],
+   "function": "general",
+   "posted": "Posted 14 Days Ago",
+   "url": "https://gunvor.wd3.myworkdayjobs.com/en-US/Gunvor_Careers/job/Geneva/Graduate-Program---Quantitative-Analysis_JR102789-1",
+   "first_seen": "2026-09-15",
+   "last_seen": "2026-09-15",
+   "active": true
+  },
+  {
+   "id": "d52955695391",
+   "company": "Gunvor",
+   "sector": "trader",
+   "title": "Graduate Program – Trading & Supply Chain",
+   "location": "Geneva",
+   "regions": [
+    "CH"
+   ],
+   "function": "commercial",
+   "posted": "Posted 14 Days Ago",
+   "url": "https://gunvor.wd3.myworkdayjobs.com/en-US/Gunvor_Careers/job/Geneva/Graduate-Program---Trading---Supply-Chain_JR102788-1",
+   "first_seen": "2026-09-15",
+   "last_seen": "2026-09-15",
+   "active": true
+  },
+  {
+   "id": "c724e33c07c4",
+   "company": "Shell",
+   "sector": "major",
+   "title": "Finance - Shell Graduate Programme 2027 - United Kingdom",
+   "location": "London - Shell Centre",
+   "regions": [
+    "UK"
+   ],
+   "function": "finance",
+   "posted": "Posted Today",
+   "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/London---Shell-Centre/Finance---Shell-Graduate-Programme-2027---United-Kingdom_R210018",
+   "first_seen": "2026-09-15",
+   "last_seen": "2026-09-15",
+   "active": true
+  },
+  {
+   "id": "2be2e9beabe6",
+   "company": "Shell",
+   "sector": "major",
+   "title": "Shell Graduate Programme 2027 - Germany",
+   "location": "Hamburg",
+   "regions": [
+    "EEA"
+   ],
+   "function": "general",
+   "posted": "Posted 14 Days Ago",
+   "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Hamburg/Shell-Graduate-Programme-2027---Germany_R205123",
+   "first_seen": "2026-09-15",
+   "last_seen": "2026-09-15",
+   "active": true
+  },
+  {
+   "id": "458c406691c4",
+   "company": "Shell",
+   "sector": "major",
+   "title": "Shell Graduate Programme 2027 - Netherlands",
+   "location": "4 Locations",
+   "regions": [
+    "EEA"
+   ],
+   "function": "general",
+   "posted": "Posted 14 Days Ago",
+   "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Rotterdam/Shell-Graduate-Programme-2027---Netherlands_R205055",
+   "first_seen": "2026-09-15",
+   "last_seen": "2026-09-15",
+   "active": true
+  },
+  {
+   "id": "4f8f970f3e97",
+   "company": "bp",
+   "sector": "major",
+   "title": "Customer Care & Support Advisor – German and English Speaking - Rotating shift  (Entry level)",
+   "location": "Hungary - Szeged",
+   "regions": [
+    "EEA"
+   ],
+   "function": "general",
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers/job/Hungary---Szeged/Customer-Care---Support-Advisor---German-Speaking---Entry-level-_RQ099900-1",
+   "first_seen": "2026-09-15",
+   "last_seen": "2026-09-15",
+   "active": true
+  },
+  {
+   "id": "b35971ecfe7e",
+   "company": "bp",
+   "sector": "major",
+   "title": "Sales Trainee",
+   "location": "IN: Patna",
+   "regions": [
+    "UNKNOWN"
+   ],
+   "function": "commercial",
+   "posted": "Posted 18 Days Ago",
+   "url": "https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers/job/IN-Patna/Sales-Trainee_RQ109411",
+   "first_seen": "2026-09-15",
+   "last_seen": "2026-09-15",
+   "active": true
+  },
+  {
+   "id": "a20364480740",
+   "company": "bp",
+   "sector": "major",
+   "title": "Sales Trainee- Varanasi",
+   "location": "IN: Varanasi",
+   "regions": [
+    "UNKNOWN"
+   ],
+   "function": "commercial",
+   "posted": "Posted 15 Days Ago",
+   "url": "https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers/job/IN-Varanasi/Sales-Trainee--Varanasi_RQ114792",
+   "first_seen": "2026-09-15",
+   "last_seen": "2026-09-15",
+   "active": true
+  }
+ ],
+ "work_rights": [
+  "EEA",
+  "CH"
+ ]
+}
