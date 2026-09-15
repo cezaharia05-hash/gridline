@@ -1,0 +1,80 @@
+# Matching is case-insensitive and accent-insensitive ("diplômé" matches "diplome"),
+# on whole words or phrases.
+
+# Regions where you already have the right to work. UK roles (or anything else
+# not listed here) get a "needs sponsorship" badge on the dashboard.
+work_rights: [EEA, CH]
+
+# Search terms sent to Workday sites. Other platforms return every job and are
+# filtered locally.
+workday_search_terms: [graduate, trainee, "early career", absolvent, programme]
+
+# Drop closed roles from the data file this many days after they disappear.
+keep_closed_days: 45
+
+early_career:
+  include:
+    - graduate
+    - graduates
+    - grad
+    - trainee
+    - trainees
+    - traineeship
+    - traineeprogramm
+    - rotational
+    - early career
+    - early careers
+    - entry level
+    - new grad
+    - analyst programme
+    - analyst program
+    - development programme
+    - absolvent
+    - absolventen
+    - absolventin
+    - berufseinsteiger
+    - jeune diplome
+    - jeunes diplomes
+    - v.i.e
+    - volontariat international
+    - neolaureati
+    - neolaureato
+    - recien titulado
+    - programa de graduados
+  exclude:
+    - intern
+    - interns
+    - internship
+    - summer
+    - placement
+    - apprentice
+    - apprenticeship
+    - vacation
+    - spring week
+    - insight
+    - praktikum
+    - praktikant
+    - werkstudent
+    - stagiaire
+    - tirocinio
+    - senior
+    - principal
+    - head of
+    - director
+    - manager
+
+functions:
+  finance: [finance, financial, accounting, accountant, controlling, controller, treasury, tax, audit, "fp&a", finanz, finanzen, "m&a", investment, investments]
+  commercial: [commercial, trading, trader, origination, sales, business development, portfolio, market analysis, markets, risk, structuring, shipping, chartering, freight, supply, traffic, marketing, deals desk, handel, vertrieb]
+  business: [business, strategy, strategic, management, consulting, analyst, analytics, procurement, contracting]
+
+# Titles matching these are dropped unless they also match finance or commercial.
+technical_exclude: [engineer, engineers, engineering, geoscience, geosciences, geologist, geophysicist, software, developer, technology, digital, cyber, cybernetics, it, technician, mechanic, mechanical, electrical, chemist, chemical, hse, safety, maintenance, operator, drilling, subsea, ingenieur, ingenieurin, informatik]
+
+# Location keywords. A role whose location matches nothing is kept and marked
+# "location unclear" so you can check it (Workday often says "3 Locations").
+regions:
+  UK: [united kingdom, uk, england, scotland, wales, northern ireland, great britain, london, greater london, aberdeen, edinburgh, glasgow, manchester, birmingham, windsor, sunbury, staines, leeds, bristol, cardiff, belfast]
+  CH: [switzerland, schweiz, suisse, svizzera, geneva, geneve, genf, zurich, zuerich, zug, baar, lugano, lausanne, basel, bern]
+  EEA: [austria, vienna, wien, belgium, brussels, antwerp, bulgaria, sofia, croatia, zagreb, cyprus, limassol, czech republic, czechia, prague, denmark, copenhagen, aalborg, aarhus, estonia, tallinn, finland, helsinki, espoo, france, paris, la defense, courbevoie, lyon, pau, germany, deutschland, berlin, hamburg, munich, muenchen, frankfurt, dusseldorf, duesseldorf, essen, cologne, koeln, wesseling, greece, athens, hungary, budapest, ireland, dublin, italy, italia, milan, milano, rome, roma, san donato milanese, latvia, riga, lithuania, vilnius, luxembourg, malta, netherlands, amsterdam, rotterdam, the hague, den haag, poland, warsaw, krakow, portugal, lisbon, lisboa, porto, romania, bucharest, bucuresti, slovakia, bratislava, slovenia, ljubljana, spain, espana, madrid, barcelona, bilbao, sweden, stockholm, gothenburg, malmo, norway, norge, oslo, stavanger, bergen, trondheim, iceland, reykjavik, liechtenstein]
+  OTHER: [united states, united states of america, usa, us, houston, new york, texas, calgary, canada, singapore, australia, brazil, brasil, rio de janeiro, qatar, india, china, shanghai, beijing, japan, tokyo, dubai, uae, united arab emirates, south africa, nigeria, mexico, chile, peru, uruguay, montevideo, argentina, hong kong, malaysia, philippines, indonesia, kazakhstan, latam, egypt, saudi arabia, oman, korea, taiwan, colombia]

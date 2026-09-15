@@ -1,0 +1,82 @@
+# Watchlist of employers.
+#
+# ats: workday | greenhouse | lever | smartrecruiters | manual
+#   workday          -> tenant, dc, site. Read them off the careers URL:
+#                       https://<tenant>.<dc>.myworkdayjobs.com/en-US/<site>
+#   greenhouse       -> token            (add eu: true for job-boards.eu.greenhouse.io)
+#   lever            -> token            (add eu: true for jobs.eu.lever.co)
+#   smartrecruiters  -> token            (company identifier in the jobs URL)
+#   manual           -> url only. Shown on the dashboard as a "check site" link.
+#
+# To convert a manual entry, run the "Discover ATS" workflow (Actions tab) with
+# the company's careers URL and paste the snippet it prints.
+#
+# sector: trader | major | utility
+
+companies:
+  # Verified Workday endpoints
+  - name: Shell
+    sector: major
+    ats: workday
+    tenant: shell
+    dc: wd3
+    site: ShellCareers
+
+  - name: bp
+    sector: major
+    ats: workday
+    tenant: bpinternational
+    dc: wd3
+    site: bpCareers
+
+  - name: Equinor
+    sector: major
+    ats: workday
+    tenant: equinor
+    dc: wd3
+    site: EQNR
+
+  - name: Centrica
+    sector: utility
+    ats: workday
+    tenant: centrica
+    dc: wd3
+    site: Centrica
+
+  - name: Trafigura
+    sector: trader
+    ats: workday
+    tenant: trafigura
+    dc: wd3
+    site: TrafiguraCareerSite
+
+  - name: Gunvor
+    sector: trader
+    ats: workday
+    tenant: gunvor
+    dc: wd3
+    site: Gunvor_Careers
+
+  # Not mapped yet: run Discover ATS on these, then convert
+  - {name: Glencore, sector: trader, ats: manual, url: "https://www.glencore.com/en/careers/early-careers"}
+  - {name: Vitol, sector: trader, ats: manual, url: "https://www.vitol.com"}
+  - {name: Mercuria, sector: trader, ats: manual, url: "https://www.mercuria.com"}
+  - {name: ExxonMobil, sector: major, ats: manual, url: "https://corporate.exxonmobil.com"}
+  - {name: TotalEnergies, sector: major, ats: manual, url: "https://www.totalenergies.com"}
+  - {name: Eni, sector: major, ats: manual, url: "https://www.eni.com"}
+  - {name: Repsol, sector: major, ats: manual, url: "https://www.repsol.com"}
+  - {name: OMV, sector: major, ats: manual, url: "https://www.omv.com"}
+  - {name: RWE, sector: utility, ats: manual, url: "https://www.rwe.com"}
+  - {name: E.ON, sector: utility, ats: manual, url: "https://www.eon.com"}
+  - {name: Uniper, sector: utility, ats: manual, url: "https://www.uniper.energy"}
+  - {name: EDF Trading, sector: utility, ats: manual, url: "https://www.edftrading.com"}
+  - {name: Engie, sector: utility, ats: manual, url: "https://www.engie.com"}
+  - {name: Iberdrola, sector: utility, ats: manual, url: "https://www.iberdrola.com"}
+  - {name: Enel, sector: utility, ats: manual, url: "https://www.enel.com"}
+  - {name: Vattenfall, sector: utility, ats: manual, url: "https://group.vattenfall.com"}
+  - {name: Ørsted, sector: utility, ats: manual, url: "https://orsted.com"}
+  - {name: Statkraft, sector: utility, ats: manual, url: "https://www.statkraft.com"}
+  - {name: Axpo, sector: utility, ats: manual, url: "https://www.axpo.com"}
+  - {name: SSE, sector: utility, ats: manual, url: "https://www.sse.com"}
+  - {name: National Grid, sector: utility, ats: manual, url: "https://www.nationalgrid.com"}
+  - {name: Octopus Energy, sector: utility, ats: manual, url: "https://octopus.energy"}

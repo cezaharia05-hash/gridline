@@ -1,0 +1,31 @@
+name: Discover ATS
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: Company name as it should appear on the dashboard
+        required: true
+      url:
+        description: Careers or graduate page URL (a homepage also works, less reliably)
+        required: true
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Discover
+        env:
+          COMPANY: ${{ inputs.name }}
+          URL: ${{ inputs.url }}
+        run: |
+          set +e
+          echo '```yaml' >> "$GITHUB_STEP_SUMMARY"
+          python -m scraper.discover "$COMPANY" "$URL" | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"

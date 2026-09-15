@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gridline</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F2F4F7;
+  --surface: #FFFFFF;
+  --ink: #1B2430;
+  --muted: #5F6B7A;
+  --rule: #D8DDE4;
+  --amber: #B97800;
+  --amber-soft: #FFF1D1;
+  --alert: #B4432F;
+  --focus: #2F5BEA;
+  --font: "Schibsted Grotesk", "Helvetica Neue", Arial, system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12161C; --surface: #1A2029; --ink: #E6E9EE; --muted: #97A1AE;
+    --rule: #2C3440; --amber: #F0B429; --amber-soft: #3A2E12; --alert: #E5775F; --focus: #7C9BFF;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12161C; --surface: #1A2029; --ink: #E6E9EE; --muted: #97A1AE;
+  --rule: #2C3440; --amber: #F0B429; --amber-soft: #3A2E12; --alert: #E5775F; --focus: #7C9BFF;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 15px/1.45 var(--font); font-variant-numeric: tabular-nums;
+}
+a { color: inherit; text-underline-offset: 3px; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 3px; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 32px 24px 64px; }
+
+header { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; }
+h1 { font-size: 2.4rem; line-height: 1; margin: 0; font-weight: 700; letter-spacing: -0.03em; }
+.sub { margin: 6px 0 0; color: var(--muted); }
+.updated { color: var(--muted); font-size: 0.87rem; text-align: right; }
+
+/* The watchlist: one meter per employer */
+.pulse { margin: 28px 0 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+.meter {
+  display: inline-flex; align-items: baseline; gap: 8px; padding: 7px 12px;
+  border: 1px solid var(--rule); border-radius: 999px; background: var(--surface);
+  font-size: 0.9rem; cursor: pointer; color: var(--ink); font-family: inherit;
+}
+.meter b { font-weight: 700; }
+.meter.zero { color: var(--muted); background: transparent; }
+.meter.error { border-style: dashed; border-color: var(--alert); color: var(--alert); background: transparent; }
+.meter[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.manual { margin: 4px 0 0; font-size: 0.87rem; color: var(--muted); }
+.manual a { margin-right: 10px; white-space: nowrap; }
+
+.controls {
+  position: sticky; top: 0; z-index: 2; background: var(--paper);
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  padding: 16px 0 12px; margin-top: 20px; border-bottom: 1px solid var(--rule);
+}
+input, select, button { font: inherit; color: var(--ink); }
+.controls input[type="search"], .controls select, .btn {
+  height: 36px; padding: 0 10px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface);
+}
+.controls input[type="search"] { flex: 1 1 220px; min-width: 0; }
+.check { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; padding: 0 4px; }
+.btn { cursor: pointer; }
+.btn:hover { border-color: var(--muted); }
+.spacer { flex: 1; }
+
+.summary { margin: 16px 0 8px; color: var(--muted); }
+.summary strong { color: var(--ink); font-weight: 500; }
+
+table { width: 100%; border-collapse: collapse; }
+th {
+  white-space: nowrap; text-align: left; font-weight: 500; font-size: 0.82rem; color: var(--muted);
+  padding: 8px 10px; border-bottom: 1px solid var(--rule);
+}
+td { padding: 12px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tr.closed td { color: var(--muted); }
+tr.closed .role a { text-decoration: line-through; }
+.company { font-weight: 500; white-space: nowrap; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; background: transparent; vertical-align: 1px; }
+tr.new .dot { background: var(--amber); box-shadow: 0 0 0 3px var(--amber-soft); }
+.role a { font-weight: 500; }
+.meta { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+.tag {
+  display: inline-block; font-size: 0.78rem; padding: 1px 7px; border-radius: 4px;
+  border: 1px solid var(--rule); color: var(--muted); margin-top: 4px; white-space: nowrap;
+}
+.tag.sponsor { border-color: var(--alert); color: var(--alert); }
+td select, td input { height: 32px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); padding: 0 6px; width: 100%; }
+td input.note { min-width: 140px; }
+.col-status { width: 150px; } .col-deadline { width: 150px; }
+
+.empty { padding: 48px 0; max-width: 60ch; }
+.empty h2 { margin: 0 0 6px; font-size: 1.2rem; }
+.empty p { margin: 0; color: var(--muted); }
+.errors { margin-top: 32px; font-size: 0.87rem; color: var(--muted); }
+.errors summary { cursor: pointer; }
+.errors li { margin: 4px 0; }
+
+@media (max-width: 860px) {
+  .wrap { padding: 20px 14px 48px; }
+  h1 { font-size: 2rem; }
+  .updated { text-align: left; }
+  .controls { position: static; display: grid; grid-template-columns: 1fr 1fr; }
+  .controls input[type="search"] { grid-column: 1 / -1; }
+  .controls select { width: 100%; }
+  .spacer { display: none; }
+  thead { display: none; }
+  table, tbody, tr, td { display: block; width: 100%; }
+  tr { border-bottom: 1px solid var(--rule); padding: 12px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; }
+  td { border: 0; padding: 0; }
+  td.company, td.role, td.where, td.notes { grid-column: 1 / -1; }
+  .col-status, .col-deadline { width: auto; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  tr.new .dot { transition: box-shadow .3s; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Gridline</h1>
+      <p class="sub">Graduate finance, commercial and business roles in energy, across the UK and Europe.</p>
+    </div>
+    <div class="updated" id="updated"></div>
+  </header>
+
+  <div class="pulse" id="pulse" aria-label="Filter by company"></div>
+  <p class="manual" id="manual" hidden></p>
+
+  <div class="controls" role="search">
+    <input type="search" id="q" placeholder="Search roles, companies, cities" aria-label="Search">
+    <select id="region" aria-label="Region">
+      <option value="">All of Europe</option>
+      <option value="UK">UK</option>
+      <option value="EEA">EU and EEA</option>
+      <option value="CH">Switzerland</option>
+      <option value="UNKNOWN">Location unclear</option>
+      <option value="RIGHTS">No sponsorship needed</option>
+    </select>
+    <select id="function" aria-label="Function">
+      <option value="">All functions</option>
+      <option value="commercial">Commercial and trading</option>
+      <option value="finance">Finance</option>
+      <option value="business">Business and strategy</option>
+      <option value="general">General programmes</option>
+    </select>
+    <select id="sector" aria-label="Company type">
+      <option value="">All company types</option>
+      <option value="trader">Commodity traders</option>
+      <option value="major">Oil and gas majors</option>
+      <option value="utility">Utilities</option>
+    </select>
+    <select id="status" aria-label="Status">
+      <option value="">Any status</option>
+      <option value="__active">In progress</option>
+      <option value="__none">Not started</option>
+      <option value="__hide">Hide rejected and not for me</option>
+    </select>
+    <select id="sort" aria-label="Sort">
+      <option value="new">Newest first</option>
+      <option value="deadline">Deadline soonest</option>
+      <option value="company">Company A to Z</option>
+    </select>
+    <label class="check"><input type="checkbox" id="week"> New this week</label>
+    <label class="check"><input type="checkbox" id="closed"> Show closed</label>
+    <span class="spacer"></span>
+    <button class="btn" id="export" type="button">Export tracker</button>
+    <label class="btn" style="display:inline-flex;align-items:center">Import tracker<input type="file" id="import" accept="application/json" hidden></label>
+  </div>
+
+  <p class="summary" id="summary"></p>
+  <table>
+    <thead><tr>
+      <th>Company</th><th>Role</th><th>Where</th><th>First seen</th>
+      <th class="col-status">Status</th><th class="col-deadline">Deadline</th><th>Notes</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="empty" id="empty" hidden></div>
+  <details class="errors" id="errors" hidden><summary></summary><ul></ul></details>
+</div>
+
+<script>
+(() => {
+  const STATUSES = ["", "Interested", "Applied", "Online test", "Interview", "Assessment centre", "Offer", "Rejected", "Not for me"];
+  const ACTIVE = new Set(["Interested", "Applied", "Online test", "Interview", "Assessment centre", "Offer"]);
+  const FUNCTION_LABEL = { commercial: "Commercial", finance: "Finance", business: "Business", general: "General programme" };
+  const REGION_LABEL = { UK: "UK", EEA: "EU/EEA", CH: "Switzerland", UNKNOWN: "Location unclear" };
+  const KEY = "gridline.tracker.v1", SEEN = "gridline.seen.v1";
+  const $ = (id) => document.getElementById(id);
+
+  const store = {
+    read(k, fallback) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fallback; } catch { return fallback; } },
+    write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* storage full or blocked */ } },
+  };
+
+  let data = { jobs: [], companies: [], work_rights: [] };
+  let tracker = store.read(KEY, {});
+  let seenBefore = store.read(SEEN, null);
+  let companyFilter = "";
+  const today = new Date();
+  const weekAgo = new Date(today.getTime() - 7 * 864e5).toISOString().slice(0, 10);
+
+  const el = (tag, attrs = {}, ...children) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === "class") n.className = v;
+      else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+      else if (v !== undefined && v !== null && v !== false) n.setAttribute(k, v === true ? "" : v);
+    }
+    for (const c of children.flat()) if (c !== null && c !== undefined) n.append(c);
+    return n;
+  };
+  const fmtDate = (iso) => iso ? new Date(iso + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "";
+  const needsSponsor = (job) => {
+    const rights = new Set(data.work_rights || []);
+    const known = job.regions.filter((r) => r !== "UNKNOWN");
+    return known.length > 0 && !known.some((r) => rights.has(r));
+  };
+  const isNew = (job) => seenBefore ? !seenBefore.includes(job.id) : job.first_seen >= weekAgo;
+
+  function save(id, patch) {
+    tracker[id] = { ...(tracker[id] || {}), ...patch };
+    if (!tracker[id].status && !tracker[id].deadline && !tracker[id].note) delete tracker[id];
+    store.write(KEY, tracker);
+  }
+
+  function filtered() {
+    const q = $("q").value.trim().toLowerCase();
+    const region = $("region").value, fn = $("function").value, sector = $("sector").value, status = $("status").value;
+    const jobs = data.jobs.filter((j) => {
+      if (!$("closed").checked && !j.active) return false;
+      if (companyFilter && j.company !== companyFilter) return false;
+      if (region === "RIGHTS" ? needsSponsor(j) || j.regions.includes("UNKNOWN") : region && !j.regions.includes(region)) return false;
+      if (fn && j.function !== fn) return false;
+      if (sector && j.sector !== sector) return false;
+      if ($("week").checked && j.first_seen < weekAgo) return false;
+      const st = (tracker[j.id] || {}).status || "";
+      if (status === "__active" && !ACTIVE.has(st)) return false;
+      if (status === "__none" && st) return false;
+      if (status === "__hide" && (st === "Rejected" || st === "Not for me")) return false;
+      if (q && !`${j.title} ${j.company} ${j.location}`.toLowerCase().includes(q)) return false;
+      return true;
+    });
+    const sort = $("sort").value;
+    const dl = (j) => (tracker[j.id] || {}).deadline || "9999";
+    jobs.sort((a, b) =>
+      (b.active - a.active) ||
+      (sort === "deadline" ? dl(a).localeCompare(dl(b)) :
+       sort === "company" ? a.company.localeCompare(b.company) || a.title.localeCompare(b.title) :
+       b.first_seen.localeCompare(a.first_seen) || a.company.localeCompare(b.company)));
+    return jobs;
+  }
+
+  function renderPulse() {
+    const pulse = $("pulse");
+    pulse.replaceChildren();
+    const counts = {};
+    for (const j of data.jobs) if (j.active) counts[j.company] = (counts[j.company] || 0) + 1;
+    const scraped = data.companies.filter((c) => c.state !== "manual");
+    for (const c of scraped) {
+      const n = counts[c.name] || 0;
+      const cls = c.state === "error" ? "meter error" : n ? "meter" : "meter zero";
+      pulse.append(el("button", {
+        class: cls, type: "button", "aria-pressed": String(companyFilter === c.name),
+        title: c.state === "error" ? `Last scrape failed: ${c.error || "unknown error"}` : `${n} open role${n === 1 ? "" : "s"}`,
+        onclick: () => { companyFilter = companyFilter === c.name ? "" : c.name; renderPulse(); renderRows(); },
+      }, c.name, el("b", {}, c.state === "error" ? "failed" : String(n))));
+    }
+    const manual = data.companies.filter((c) => c.state === "manual");
+    const m = $("manual");
+    m.hidden = manual.length === 0;
+    m.replaceChildren(manual.length ? "Check these sites yourself: " : "",
+      ...manual.map((c) => el("a", { href: c.url, target: "_blank", rel: "noopener" }, c.name)));
+
+    const errs = scraped.filter((c) => c.state === "error");
+    const box = $("errors");
+    box.hidden = errs.length === 0;
+    box.querySelector("summary").textContent = `${errs.length} scraper${errs.length === 1 ? "" : "s"} failed on the last run`;
+    box.querySelector("ul").replaceChildren(...errs.map((c) => el("li", {}, el("strong", {}, c.name), `: ${c.error || "unknown error"}`)));
+  }
+
+  function renderRows() {
+    const jobs = filtered();
+    const rows = $("rows");
+    rows.replaceChildren(...jobs.map((j) => {
+      const t = tracker[j.id] || {};
+      const statusSel = el("select", { "aria-label": `Status for ${j.title}`, onchange: (e) => { save(j.id, { status: e.target.value }); } },
+        ...STATUSES.map((s) => el("option", { value: s, selected: (t.status || "") === s }, s || "Not started")));
+      const tags = [
+        ...j.regions.map((r) => el("span", { class: "tag" }, REGION_LABEL[r] || r)),
+        needsSponsor(j) ? el("span", { class: "tag sponsor", title: "Outside the regions where you have work rights" }, "Sponsorship") : null,
+      ];
+      return el("tr", { class: [j.active ? "" : "closed", j.active && isNew(j) ? "new" : ""].join(" ").trim() },
+        el("td", { class: "company" }, el("span", { class: "dot", "aria-hidden": "true" }), j.company),
+        el("td", { class: "role" },
+          el("a", { href: j.url, target: "_blank", rel: "noopener" }, j.title),
+          el("span", { class: "meta" }, FUNCTION_LABEL[j.function] || j.function, j.active ? "" : `, closed after ${fmtDate(j.last_seen)}`)),
+        el("td", { class: "where" }, el("span", {}, j.location || "Not stated"), el("span", { class: "meta" }, tags)),
+        el("td", {}, fmtDate(j.first_seen)),
+        el("td", { class: "col-status" }, statusSel),
+        el("td", { class: "col-deadline" }, el("input", { type: "date", value: t.deadline || "", "aria-label": `Deadline for ${j.title}`, onchange: (e) => save(j.id, { deadline: e.target.value }) })),
+        el("td", { class: "notes" }, el("input", { class: "note", type: "text", value: t.note || "", placeholder: "Add a note", "aria-label": `Notes for ${j.title}`, onchange: (e) => save(j.id, { note: e.target.value }) })),
+      );
+    }));
+
+    const open = data.jobs.filter((j) => j.active);
+    const fresh = open.filter(isNew).length;
+    const inProgress = Object.values(tracker).filter((t) => ACTIVE.has(t.status)).length;
+    const s = $("summary");
+    s.replaceChildren(
+      el("strong", {}, `${jobs.length} shown`), ` of ${open.length} open roles`,
+      fresh ? `, ${fresh} new since your last visit` : "",
+      inProgress ? `. ${inProgress} application${inProgress === 1 ? "" : "s"} in progress.` : ".");
+
+    const empty = $("empty");
+    empty.hidden = jobs.length > 0 || !data.generated_at;
+    if (data.generated_at && jobs.length === 0) {
+      empty.replaceChildren(el("h2", {}, "No roles match these filters"), el("p", {}, "Clear the search or widen the filters to see more."));
+    }
+  }
+
+  function showEmpty(title, body) {
+    $("summary").textContent = "";
+    const empty = $("empty");
+    empty.hidden = false;
+    empty.replaceChildren(el("h2", {}, title), el("p", {}, body));
+  }
+
+  for (const id of ["q", "region", "function", "sector", "status", "sort", "week", "closed"]) {
+    $(id).addEventListener(id === "q" ? "input" : "change", renderRows);
+  }
+
+  $("export").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify({ exported_at: new Date().toISOString(), tracker }, null, 1)], { type: "application/json" });
+    const a = el("a", { href: URL.createObjectURL(blob), download: `gridline-tracker-${today.toISOString().slice(0, 10)}.json` });
+    document.body.append(a); a.click(); a.remove();
+  });
+  $("import").addEventListener("change", async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    try {
+      const parsed = JSON.parse(await file.text());
+      const incoming = parsed.tracker || parsed;
+      tracker = { ...tracker, ...incoming };
+      store.write(KEY, tracker);
+      renderRows();
+      $("summary").prepend(`Imported ${Object.keys(incoming).length} tracked roles. `);
+    } catch {
+      $("summary").textContent = "That file isn't a Gridline tracker export. Choose a file saved with Export tracker.";
+    }
+    e.target.value = "";
+  });
+
+  const rememberSeen = () => { if (data.jobs.length) store.write(SEEN, data.jobs.map((j) => j.id)); };
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") rememberSeen(); });
+  window.addEventListener("pagehide", rememberSeen);
+
+  fetch("data/jobs.json", { cache: "no-store" })
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((json) => {
+      data = { jobs: [], companies: [], work_rights: [], ...json };
+      if (data.generated_at) {
+        const d = new Date(data.generated_at);
+        $("updated").textContent = `Updated ${d.toLocaleDateString("en-GB", { day: "numeric", month: "short" })}, ${d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}`;
+      }
+      renderPulse();
+      if (!data.generated_at) {
+        showEmpty("No roles collected yet", "Open the Actions tab on GitHub, choose Scrape roles, press Run workflow, then reload this page in a couple of minutes.");
+        return;
+      }
+      renderRows();
+    })
+    .catch(() => showEmpty("Couldn't load the roles file", "This page reads data/jobs.json, which browsers block when the page is opened straight from disk. Open it through GitHub Pages, or run python -m http.server inside the docs folder."));
+})();
+</script>
+</body>
+</html>
