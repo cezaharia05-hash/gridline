@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-09-25T05:26:07+00:00",
+ "generated_at": "2026-09-26T05:25:10+00:00",
  "companies": [
   {
    "name": "Shell",
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 142,
+   "scanned": 132,
    "kept": 3
   },
   {
@@ -14,7 +14,7 @@
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 239,
+   "scanned": 229,
    "kept": 0
   },
   {
@@ -22,7 +22,7 @@
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 7,
+   "scanned": 8,
    "kept": 0
   },
   {
@@ -30,7 +30,7 @@
    "sector": "utility",
    "ats": "workday",
    "state": "ok",
-   "scanned": 32,
+   "scanned": 33,
    "kept": 0
   },
   {
@@ -215,10 +215,10 @@
     "CH"
    ],
    "function": "general",
-   "posted": "Posted 23 Days Ago",
+   "posted": "Posted 24 Days Ago",
    "url": "https://gunvor.wd3.myworkdayjobs.com/en-US/Gunvor_Careers/job/Geneva/Graduate-Program---Quantitative-Analysis_JR102789-1",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-09-25",
+   "last_seen": "2026-09-26",
    "active": true
   },
   {
@@ -231,10 +231,10 @@
     "CH"
    ],
    "function": "commercial",
-   "posted": "Posted 23 Days Ago",
+   "posted": "Posted 24 Days Ago",
    "url": "https://gunvor.wd3.myworkdayjobs.com/en-US/Gunvor_Careers/job/Geneva/Graduate-Program---Trading---Supply-Chain_JR102788-1",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-09-25",
+   "last_seen": "2026-09-26",
    "active": true
   },
   {
@@ -247,10 +247,10 @@
     "UK"
    ],
    "function": "finance",
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/London---Shell-Centre/Finance---Shell-Graduate-Programme-2027---United-Kingdom_R210018",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-09-25",
+   "last_seen": "2026-09-26",
    "active": true
   },
   {
@@ -263,10 +263,10 @@
     "EEA"
    ],
    "function": "general",
-   "posted": "Posted 23 Days Ago",
+   "posted": "Posted 24 Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Hamburg/Shell-Graduate-Programme-2027---Germany_R205123",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-09-25",
+   "last_seen": "2026-09-26",
    "active": true
   },
   {
@@ -279,10 +279,10 @@
     "EEA"
    ],
    "function": "general",
-   "posted": "Posted 23 Days Ago",
+   "posted": "Posted 24 Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Rotterdam/Shell-Graduate-Programme-2027---Netherlands_R205055",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-09-25",
+   "last_seen": "2026-09-26",
    "active": true
   }
  ],
