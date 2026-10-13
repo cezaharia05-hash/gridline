@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-12T05:31:42+00:00",
+ "generated_at": "2026-10-13T05:32:01+00:00",
  "companies": [
   {
    "name": "Shell",
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 112,
+   "scanned": 115,
    "kept": 3
   },
   {
@@ -14,7 +14,7 @@
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 201,
+   "scanned": 207,
    "kept": 0
   },
   {
@@ -30,7 +30,7 @@
    "sector": "utility",
    "ats": "workday",
    "state": "ok",
-   "scanned": 19,
+   "scanned": 20,
    "kept": 0
   },
   {
@@ -38,7 +38,7 @@
    "sector": "trader",
    "ats": "workday",
    "state": "ok",
-   "scanned": 15,
+   "scanned": 17,
    "kept": 0
   },
   {
@@ -46,7 +46,7 @@
    "sector": "trader",
    "ats": "workday",
    "state": "ok",
-   "scanned": 6,
+   "scanned": 5,
    "kept": 0
   },
   {
@@ -215,10 +215,10 @@
     "UK"
    ],
    "function": "finance",
-   "posted": "Posted 26 Days Ago",
+   "posted": "Posted 27 Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/London---Shell-Centre/Finance---Shell-Graduate-Programme-2027---United-Kingdom_R210018",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-10-12",
+   "last_seen": "2026-10-13",
    "active": true
   },
   {
@@ -234,7 +234,7 @@
    "posted": "Posted 30+ Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Hamburg/Shell-Graduate-Programme-2027---Germany_R205123",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-10-12",
+   "last_seen": "2026-10-13",
    "active": true
   },
   {
@@ -250,7 +250,7 @@
    "posted": "Posted 30+ Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Rotterdam/Shell-Graduate-Programme-2027---Netherlands_R205055",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-10-12",
+   "last_seen": "2026-10-13",
    "active": true
   },
   {
