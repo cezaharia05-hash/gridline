@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-14T05:40:31+00:00",
+ "generated_at": "2026-10-15T05:40:20+00:00",
  "companies": [
   {
    "name": "Shell",
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 127,
+   "scanned": 123,
    "kept": 3
   },
   {
@@ -14,7 +14,7 @@
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 208,
+   "scanned": 206,
    "kept": 0
   },
   {
@@ -30,8 +30,8 @@
    "sector": "utility",
    "ats": "workday",
    "state": "ok",
-   "scanned": 20,
-   "kept": 0
+   "scanned": 29,
+   "kept": 4
   },
   {
    "name": "Trafigura",
@@ -206,6 +206,70 @@
  ],
  "jobs": [
   {
+   "id": "f5b9c14d6c31",
+   "company": "Centrica",
+   "sector": "utility",
+   "title": "Business Management Graduate",
+   "location": "Flexible",
+   "regions": [
+    "UNKNOWN"
+   ],
+   "function": "business",
+   "posted": "Posted Today",
+   "url": "https://centrica.wd3.myworkdayjobs.com/en-US/Centrica/job/Flexible/Business-Management-Graduate_R0090938",
+   "first_seen": "2026-10-15",
+   "last_seen": "2026-10-15",
+   "active": true
+  },
+  {
+   "id": "9709e7825adb",
+   "company": "Centrica",
+   "sector": "utility",
+   "title": "Finance Graduate",
+   "location": "Flexible",
+   "regions": [
+    "UNKNOWN"
+   ],
+   "function": "finance",
+   "posted": "Posted Today",
+   "url": "https://centrica.wd3.myworkdayjobs.com/en-US/Centrica/job/Flexible/Finance-Graduate_R0090939",
+   "first_seen": "2026-10-15",
+   "last_seen": "2026-10-15",
+   "active": true
+  },
+  {
+   "id": "bfaed66cd153",
+   "company": "Centrica",
+   "sector": "utility",
+   "title": "Marketing Graduate",
+   "location": "Flexible",
+   "regions": [
+    "UNKNOWN"
+   ],
+   "function": "commercial",
+   "posted": "Posted Today",
+   "url": "https://centrica.wd3.myworkdayjobs.com/en-US/Centrica/job/Flexible/Marketing-Graduate_R0090941-1",
+   "first_seen": "2026-10-15",
+   "last_seen": "2026-10-15",
+   "active": true
+  },
+  {
+   "id": "2393632e11ce",
+   "company": "Centrica",
+   "sector": "utility",
+   "title": "People Graduate",
+   "location": "Flexible",
+   "regions": [
+    "UNKNOWN"
+   ],
+   "function": "general",
+   "posted": "Posted Today",
+   "url": "https://centrica.wd3.myworkdayjobs.com/en-US/Centrica/job/Flexible/People-Graduate_R0090940",
+   "first_seen": "2026-10-15",
+   "last_seen": "2026-10-15",
+   "active": true
+  },
+  {
    "id": "c724e33c07c4",
    "company": "Shell",
    "sector": "major",
@@ -215,10 +279,10 @@
     "UK"
    ],
    "function": "finance",
-   "posted": "Posted 28 Days Ago",
+   "posted": "Posted 29 Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/London---Shell-Centre/Finance---Shell-Graduate-Programme-2027---United-Kingdom_R210018",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-10-14",
+   "last_seen": "2026-10-15",
    "active": true
   },
   {
@@ -234,7 +298,7 @@
    "posted": "Posted 30+ Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Hamburg/Shell-Graduate-Programme-2027---Germany_R205123",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-10-14",
+   "last_seen": "2026-10-15",
    "active": true
   },
   {
@@ -250,7 +314,7 @@
    "posted": "Posted 30+ Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Rotterdam/Shell-Graduate-Programme-2027---Netherlands_R205055",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-10-14",
+   "last_seen": "2026-10-15",
    "active": true
   },
   {
