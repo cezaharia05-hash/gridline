@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-28T11:20:17+00:00",
+ "generated_at": "2026-10-29T11:31:18+00:00",
  "companies": [
   {
    "name": "Shell",
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 130,
+   "scanned": 132,
    "kept": 3
   },
   {
@@ -14,7 +14,7 @@
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 188,
+   "scanned": 180,
    "kept": 0
   },
   {
@@ -22,7 +22,7 @@
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 8,
+   "scanned": 9,
    "kept": 0
   },
   {
@@ -30,15 +30,15 @@
    "sector": "utility",
    "ats": "workday",
    "state": "ok",
-   "scanned": 32,
-   "kept": 5
+   "scanned": 23,
+   "kept": 1
   },
   {
    "name": "Trafigura",
    "sector": "trader",
    "ats": "workday",
    "state": "ok",
-   "scanned": 11,
+   "scanned": 12,
    "kept": 0
   },
   {
@@ -215,10 +215,58 @@
     "UK"
    ],
    "function": "commercial",
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://centrica.wd3.myworkdayjobs.com/en-US/Centrica/job/Greater-London/Graduate-Commodity-Trading-Analyst_R0091040",
    "first_seen": "2026-10-17",
-   "last_seen": "2026-10-28",
+   "last_seen": "2026-10-29",
+   "active": true
+  },
+  {
+   "id": "c724e33c07c4",
+   "company": "Shell",
+   "sector": "major",
+   "title": "Finance - Shell Graduate Programme 2027 - United Kingdom",
+   "location": "London - Shell Centre",
+   "regions": [
+    "UK"
+   ],
+   "function": "finance",
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/London---Shell-Centre/Finance---Shell-Graduate-Programme-2027---United-Kingdom_R210018",
+   "first_seen": "2026-09-15",
+   "last_seen": "2026-10-29",
+   "active": true
+  },
+  {
+   "id": "2be2e9beabe6",
+   "company": "Shell",
+   "sector": "major",
+   "title": "Shell Graduate Programme 2027 - Germany",
+   "location": "Hamburg",
+   "regions": [
+    "EEA"
+   ],
+   "function": "general",
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Hamburg/Shell-Graduate-Programme-2027---Germany_R205123",
+   "first_seen": "2026-09-15",
+   "last_seen": "2026-10-29",
+   "active": true
+  },
+  {
+   "id": "458c406691c4",
+   "company": "Shell",
+   "sector": "major",
+   "title": "Shell Graduate Programme 2027 - Netherlands",
+   "location": "4 Locations",
+   "regions": [
+    "EEA"
+   ],
+   "function": "general",
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Rotterdam/Shell-Graduate-Programme-2027---Netherlands_R205055",
+   "first_seen": "2026-09-15",
+   "last_seen": "2026-10-29",
    "active": true
   },
   {
@@ -235,7 +283,7 @@
    "url": "https://centrica.wd3.myworkdayjobs.com/en-US/Centrica/job/Flexible/Business-Management-Graduate_R0090938",
    "first_seen": "2026-10-15",
    "last_seen": "2026-10-28",
-   "active": true
+   "active": false
   },
   {
    "id": "9709e7825adb",
@@ -251,7 +299,7 @@
    "url": "https://centrica.wd3.myworkdayjobs.com/en-US/Centrica/job/Flexible/Finance-Graduate_R0090939",
    "first_seen": "2026-10-15",
    "last_seen": "2026-10-28",
-   "active": true
+   "active": false
   },
   {
    "id": "bfaed66cd153",
@@ -267,7 +315,7 @@
    "url": "https://centrica.wd3.myworkdayjobs.com/en-US/Centrica/job/Flexible/Marketing-Graduate_R0090941-1",
    "first_seen": "2026-10-15",
    "last_seen": "2026-10-28",
-   "active": true
+   "active": false
   },
   {
    "id": "2393632e11ce",
@@ -283,55 +331,7 @@
    "url": "https://centrica.wd3.myworkdayjobs.com/en-US/Centrica/job/Flexible/People-Graduate_R0090940",
    "first_seen": "2026-10-15",
    "last_seen": "2026-10-28",
-   "active": true
-  },
-  {
-   "id": "c724e33c07c4",
-   "company": "Shell",
-   "sector": "major",
-   "title": "Finance - Shell Graduate Programme 2027 - United Kingdom",
-   "location": "London - Shell Centre",
-   "regions": [
-    "UK"
-   ],
-   "function": "finance",
-   "posted": "Posted 30+ Days Ago",
-   "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/London---Shell-Centre/Finance---Shell-Graduate-Programme-2027---United-Kingdom_R210018",
-   "first_seen": "2026-09-15",
-   "last_seen": "2026-10-28",
-   "active": true
-  },
-  {
-   "id": "2be2e9beabe6",
-   "company": "Shell",
-   "sector": "major",
-   "title": "Shell Graduate Programme 2027 - Germany",
-   "location": "Hamburg",
-   "regions": [
-    "EEA"
-   ],
-   "function": "general",
-   "posted": "Posted 30+ Days Ago",
-   "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Hamburg/Shell-Graduate-Programme-2027---Germany_R205123",
-   "first_seen": "2026-09-15",
-   "last_seen": "2026-10-28",
-   "active": true
-  },
-  {
-   "id": "458c406691c4",
-   "company": "Shell",
-   "sector": "major",
-   "title": "Shell Graduate Programme 2027 - Netherlands",
-   "location": "4 Locations",
-   "regions": [
-    "EEA"
-   ],
-   "function": "general",
-   "posted": "Posted 30+ Days Ago",
-   "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Rotterdam/Shell-Graduate-Programme-2027---Netherlands_R205055",
-   "first_seen": "2026-09-15",
-   "last_seen": "2026-10-28",
-   "active": true
+   "active": false
   },
   {
    "id": "c2b69f7e38a5",
