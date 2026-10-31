@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-30T11:24:14+00:00",
+ "generated_at": "2026-10-31T10:55:28+00:00",
  "companies": [
   {
    "name": "Shell",
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 129,
+   "scanned": 107,
    "kept": 3
   },
   {
@@ -14,7 +14,7 @@
    "sector": "major",
    "ats": "workday",
    "state": "ok",
-   "scanned": 158,
+   "scanned": 141,
    "kept": 0
   },
   {
@@ -30,8 +30,8 @@
    "sector": "utility",
    "ats": "workday",
    "state": "ok",
-   "scanned": 24,
-   "kept": 1
+   "scanned": 21,
+   "kept": 0
   },
   {
    "name": "Trafigura",
@@ -206,22 +206,6 @@
  ],
  "jobs": [
   {
-   "id": "ebc26d84f2fa",
-   "company": "Centrica",
-   "sector": "utility",
-   "title": "Graduate Commodity Trading Analyst",
-   "location": "Greater London",
-   "regions": [
-    "UK"
-   ],
-   "function": "commercial",
-   "posted": "Posted 14 Days Ago",
-   "url": "https://centrica.wd3.myworkdayjobs.com/en-US/Centrica/job/Greater-London/Graduate-Commodity-Trading-Analyst_R0091040",
-   "first_seen": "2026-10-17",
-   "last_seen": "2026-10-30",
-   "active": true
-  },
-  {
    "id": "c724e33c07c4",
    "company": "Shell",
    "sector": "major",
@@ -234,7 +218,7 @@
    "posted": "Posted 30+ Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/London---Shell-Centre/Finance---Shell-Graduate-Programme-2027---United-Kingdom_R210018",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "active": true
   },
   {
@@ -250,7 +234,7 @@
    "posted": "Posted 30+ Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Hamburg/Shell-Graduate-Programme-2027---Germany_R205123",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "active": true
   },
   {
@@ -266,8 +250,24 @@
    "posted": "Posted 30+ Days Ago",
    "url": "https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Rotterdam/Shell-Graduate-Programme-2027---Netherlands_R205055",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "active": true
+  },
+  {
+   "id": "ebc26d84f2fa",
+   "company": "Centrica",
+   "sector": "utility",
+   "title": "Graduate Commodity Trading Analyst",
+   "location": "Greater London",
+   "regions": [
+    "UK"
+   ],
+   "function": "commercial",
+   "posted": "Posted 14 Days Ago",
+   "url": "https://centrica.wd3.myworkdayjobs.com/en-US/Centrica/job/Greater-London/Graduate-Commodity-Trading-Analyst_R0091040",
+   "first_seen": "2026-10-17",
+   "last_seen": "2026-10-30",
+   "active": false
   },
   {
    "id": "f5b9c14d6c31",
