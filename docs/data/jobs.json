@@ -1,53 +1,48 @@
 {
- "generated_at": "2026-11-15T12:43:46+00:00",
+ "generated_at": "2026-11-18T13:56:06+00:00",
  "companies": [
   {
    "name": "Shell",
    "sector": "major",
    "ats": "workday",
-   "state": "ok",
-   "scanned": 127,
-   "kept": 3
+   "state": "error",
+   "error": "HTTP 429 from https://shell.wd3.myworkdayjobs.com/wday/cxs/shell/ShellCareers/jobs"
   },
   {
    "name": "bp",
    "sector": "major",
    "ats": "workday",
-   "state": "ok",
-   "scanned": 145,
-   "kept": 0
+   "state": "error",
+   "error": "HTTP 429 from https://bpinternational.wd3.myworkdayjobs.com/wday/cxs/bpinternational/bpCareers/jobs"
   },
   {
    "name": "Equinor",
    "sector": "major",
    "ats": "workday",
-   "state": "ok",
-   "scanned": 9,
-   "kept": 0
+   "state": "error",
+   "error": "HTTP 429 from https://equinor.wd3.myworkdayjobs.com/wday/cxs/equinor/EQNR/jobs"
   },
   {
    "name": "Centrica",
    "sector": "utility",
    "ats": "workday",
-   "state": "ok",
-   "scanned": 22,
-   "kept": 0
+   "state": "error",
+   "error": "HTTP 429 from https://centrica.wd3.myworkdayjobs.com/wday/cxs/centrica/Centrica/jobs"
   },
   {
    "name": "Trafigura",
    "sector": "trader",
    "ats": "workday",
    "state": "ok",
-   "scanned": 14,
+   "scanned": 15,
    "kept": 0
   },
   {
    "name": "Gunvor",
    "sector": "trader",
    "ats": "workday",
-   "state": "ok",
-   "scanned": 6,
-   "kept": 0
+   "state": "error",
+   "error": "HTTP 429 from https://gunvor.wd3.myworkdayjobs.com/wday/cxs/gunvor/Gunvor_Careers/jobs"
   },
   {
    "name": "Glencore",
